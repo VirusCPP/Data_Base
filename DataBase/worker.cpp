@@ -145,3 +145,16 @@ void workerSearch() {
         }
     }
 }
+
+int BinarySearch(int arr[], int left, int right, int key) {
+    int midd = 0;
+    while (true) {
+        midd = (left + right) / 2;
+        if (key < arr[midd]) // если искомое меньше значени€ в €чейке
+            right = midd - 1; // смещаем правую границу поиска
+        else if (key > arr[midd]) // если больше значени€ в €чейке
+            left = midd + 1; // смещаем левую границу поиска
+        else return midd; // иначе функци€ возвращает индекс €чейки
+        if (left > right) return -1; // если границы сомкнулись
+    }
+}

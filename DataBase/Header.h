@@ -40,6 +40,7 @@ bool checkWorkersList();
 void addWorkerFromFile();
 void encrypt(string& path, int key);
 void decrypt(string& path, int key);
+int BinarySearch(int arr[], int left, int right, int key);
 
 extern string password;
 extern string login;
